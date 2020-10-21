@@ -7,17 +7,6 @@ vk_session = vk_api.VkApi(login, password)
 vk_session.auth()
 vk = vk_session.get_api()
 
-
-def upload_img():
-    upload = vk_api.VkUpload(vk_session)
-    photo = upload.photo_messages('q.png')
-    owner_id = photo[0]['owner_id']
-    photo_id = photo[0]['id']
-    access_key = photo[0]['access_key']
-    attachment = f'photo{owner_id}_{photo_id}%F{access_key}'
-    return attachment
-
-
 def check_last_comment(post):
     lst = ''
     while not lst:
