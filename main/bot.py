@@ -5,7 +5,7 @@ from time import sleep
 from random import randint
 
 # Авторизация
-login, password = '+79964020490', 'Wikutorrent21'
+login, password = '', ''
 vk_session = vk_api.VkApi(login, password)
 vk_session.auth()
 vk = vk_session.get_api()
