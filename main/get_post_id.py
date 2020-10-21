@@ -2,7 +2,7 @@ import vk_api
 from time import sleep
 
 # Авторизация
-login, password = '+79154330518', 'wikiummg2krg1'
+login, password = '', ''
 vk_session = vk_api.VkApi(login, password)
 vk_session.auth()
 vk = vk_session.get_api()
