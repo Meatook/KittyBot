@@ -16,11 +16,11 @@ with codecs.open('ЕГ.txt', encoding='utf-8') as text:
         if not gpi.check_like(post_id):
             sleep(4)
             vk_session.method('likes.add',
-                              {'user_id': 353313939, 'type': 'post', 'owner_id': -193376219, 'item_id': post_id})
+                              {'user_id': , 'type': 'post', 'owner_id': , 'item_id': post_id})
 
 
     # Функция отправки коментария
-    def send_comment(post, comment_text, group=-193376219):
+    def send_comment(post, comment_text, group=):
             # Отправка при обычных условиях и при капче
         try:
             vk_session.method('wall.createComment', {'owner_id': group, 'post_id': post, 'message': comment_text, 'random_id': 0}, captcha_sid=None, captcha_key=None)
@@ -45,7 +45,7 @@ with codecs.open('ЕГ.txt', encoding='utf-8') as text:
             try:
                 last_post_id = gpi.get_last_post_id()
             except:
-                all_wall = (vk_session.method('wall.get', {'owner_id': -193376219, 'count': 2})).values()
+                all_wall = (vk_session.method('wall.get', {'owner_id': , 'count': 2})).values()
                 last_post_id = (list(list(all_wall)[1])[1])['id']
 
 #            get_liked(last_post_id)
